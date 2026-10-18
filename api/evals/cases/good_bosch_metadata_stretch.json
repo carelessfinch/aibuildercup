@@ -1,0 +1,71 @@
+{
+  "case_id": "good_bosch_metadata_stretch",
+  "kind": "good",
+  "stretch": true,
+  "review_scope": "metadata",
+  "fourm_input": {
+    "case_id": "etch_bosch_trench_v1",
+    "question": "Plan a Bosch deep-silicon trench and report depth, CD, and sidewall profile.",
+    "machine": {
+      "chamber_radius_mm": 150,
+      "reactor_height_mm": 100,
+      "chuck": "electrostatic",
+      "diagnostics": ["interferometry"]
+    },
+    "material": {
+      "wafer": "Si",
+      "stack": ["resist_10um", "Si"]
+    },
+    "method": {
+      "recipe": {
+        "power_W": 800,
+        "pressure_mTorr": 50,
+        "flow_sccm": {"SF6": 300, "C4F8": 200},
+        "bias_sweep_V": [-100],
+        "cycles": 120,
+        "target_trench_width_um": 5,
+        "target_depth_um": 80
+      },
+      "metrology": ["sem", "profilometry"]
+    },
+    "man": {
+      "operator_experience": "senior",
+      "shift": "day",
+      "notes": "Stretch planning fixture only; no private process data."
+    },
+    "source": "synthetic"
+  },
+  "plan": {
+    "case_id": "etch_bosch_trench_v1",
+    "question": "Plan a Bosch deep-silicon trench and report depth, CD, and sidewall profile.",
+    "solver": "viennaps_bosch",
+    "chemistry_ref": "chemistry_sf6c4f8_bosch.yaml",
+    "operating_point": {
+      "power_W": 800,
+      "pressure_mTorr": 50,
+      "flow_sccm": {"SF6": 300, "C4F8": 200},
+      "bias_sweep_V": [-100]
+    },
+    "uncertain_parameters": [
+      {"name": "ion_yield", "bounds": [0.5, 2.0]},
+      {"name": "polymer_sticking", "bounds": [0.1, 0.9]}
+    ],
+    "calibration_targets": [
+      {
+        "metric": "depth_um",
+        "source": "synthetic_public_target",
+        "source_kind": "experiment",
+        "tolerance_pct": 10
+      }
+    ],
+    "acceptance_criteria_proposal": [
+      "depth within 10% of synthetic target",
+      "sidewall angle within case tolerance"
+    ],
+    "literature_refs": []
+  },
+  "expect": {
+    "verdict_in": ["approve"],
+    "must_signoff_possible": true
+  }
+}

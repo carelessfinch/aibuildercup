@@ -1,0 +1,8 @@
+**/__pycache__
+.venv
+venv
+tests
+index
+models
+corpus
+

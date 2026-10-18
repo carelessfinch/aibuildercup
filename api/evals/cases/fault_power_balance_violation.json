@@ -1,0 +1,81 @@
+{
+  "case_id": "fault_power_balance_violation",
+  "kind": "fault",
+  "fault": {
+    "site": "plasma_result",
+    "description": "Power balance residual exceeds any acceptable solver diagnostic tolerance",
+    "coverage": [
+      "power_balance_violation"
+    ],
+    "inject": {
+      "path": "diagnostics.power_balance_residual_pct",
+      "op": "set",
+      "value": 55.0
+    }
+  },
+  "fourm_input": {
+    "case_id": "plasma_cf4o2_icp_fault_power_balance",
+    "question": "Validate electron density and etch rate versus bias.",
+    "machine": {
+      "diagnostics": [
+        "langmuir_probe",
+        "oes"
+      ]
+    },
+    "material": {
+      "wafer": "Si",
+      "stack": []
+    },
+    "method": {
+      "recipe": {
+        "power_W": 100,
+        "pressure_mTorr": 15,
+        "flow_sccm": {
+          "CF4": 40,
+          "O2": 10
+        },
+        "bias_sweep_V": [
+          0,
+          50,
+          100
+        ]
+      },
+      "metrology": [
+        "sem",
+        "langmuir_probe"
+      ]
+    },
+    "source": "synthetic"
+  },
+  "plasma_result": {
+    "points": [
+      {
+        "bias_V": 0,
+        "te_eV": 2.5,
+        "ne_m3": 1.6e+17,
+        "ion_flux_m2s": 1.82e+20,
+        "ion_energy_eV": 5,
+        "species_m3": {
+          "e": 1.6e+17,
+          "CF3+": 1.6e+17
+        }
+      }
+    ],
+    "diagnostics": {
+      "power_balance_residual_pct": 2.8,
+      "runtime_s": 0.05,
+      "chemistry_id": "cf4o2_kimura2006_stub",
+      "averaging_note": "synthetic offline baseline"
+    }
+  },
+  "expect": {
+    "verdict_in": [
+      "revise",
+      "escalate"
+    ],
+    "must_catch": [
+      "power_balance_residual"
+    ],
+    "must_not_signoff": true
+  }
+}

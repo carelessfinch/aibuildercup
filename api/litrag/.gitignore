@@ -1,0 +1,5 @@
+# Copyrighted source material and anything derived from it: keep out of the public repo.
+corpus/
+index/
+models/
+__pycache__/

@@ -1,0 +1,8 @@
+node_modules
+build
+.env.local
+.playwright/
+.playwright-cli/
+qa-screenshots/
+playwright-report/
+test-results/

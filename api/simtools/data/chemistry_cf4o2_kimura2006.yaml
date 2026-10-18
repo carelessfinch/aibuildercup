@@ -1,0 +1,26 @@
+schema: simtools.chemistry/1
+id: cf4o2_kimura2006
+status: stub
+citation: >-
+  Kimura & Noto, J. Appl. Phys. 100, 063303 (2006); electron cross sections
+  from LxCat as cited by the COMSOL reference model doc
+  (comsol_icp_cf4o2 in the private litrag index).
+species:
+  - {name: e, charge: -1, mass_amu: 0.0005486, role: electron}
+  - {name: CF4, charge: 0, mass_amu: 88.00, role: neutral}
+  - {name: O2, charge: 0, mass_amu: 32.00, role: neutral}
+  - {name: CF3, charge: 0, mass_amu: 69.00, role: radical}
+  - {name: CF2, charge: 0, mass_amu: 50.00, role: radical}
+  - {name: F, charge: 0, mass_amu: 19.00, role: radical}
+  - {name: F2, charge: 0, mass_amu: 38.00, role: radical}
+  - {name: O, charge: 0, mass_amu: 16.00, role: radical}
+  - {name: CF3+, charge: 1, mass_amu: 69.00, role: ion}
+  - {name: CF2+, charge: 1, mass_amu: 50.00, role: ion}
+  - {name: O2+, charge: 1, mass_amu: 32.00, role: ion}
+reactions: []
+notes: >-
+  STUB per decision K1: the Kimura & Noto reaction set and LxCat cross
+  sections are filled in here under
+  the same schema. The loader refuses status=ready until every reaction has
+  a rate, so this file cannot be mistaken for working chemistry. M1 runs on
+  chemistry_ar_lieberman.yaml meanwhile.

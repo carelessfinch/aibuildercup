@@ -1,0 +1,7 @@
+# Versions tested 2026-10-07 (Python 3.13, Linux x86_64)
+pypdfium2==5.13.0        # PDF text extraction (Apache-2.0/BSD; PyMuPDF avoided because it is AGPL)
+numpy==2.5.3
+snowballstemmer==3.1.1   # keyword-search stemming
+mediapipe==1.1.0         # runs EmbeddingGemma locally; on Debian/Ubuntu also: apt-get install libegl1 libgles2
+sentencepiece==0.2.2     # token counting so passages fit EmbeddingGemma's 512-token window
+google-genai==2.28.0     # optional: `ask` command and the Gemini embedding backend

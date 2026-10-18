@@ -1,0 +1,78 @@
+{
+  "case_id": "fault_chemistry_unknown_species",
+  "kind": "fault",
+  "fault": {
+    "site": "chemistry",
+    "description": "Reaction product is absent from the declared species table",
+    "coverage": [
+      "chemistry_invalid"
+    ],
+    "inject": {
+      "path": "reactions.0.equation",
+      "op": "set",
+      "value": "e + Ar -> UnknownRadical + e + e"
+    }
+  },
+  "fourm_input": {
+    "case_id": "plasma_ar_icp_fault_chem_species",
+    "question": "Validate electron density for a synthetic argon ICP.",
+    "machine": {
+      "diagnostics": [
+        "langmuir_probe"
+      ]
+    },
+    "material": {
+      "wafer": "Si",
+      "stack": []
+    },
+    "method": {
+      "recipe": {
+        "power_W": 300,
+        "pressure_mTorr": 10,
+        "flow_sccm": {
+          "Ar": 50
+        },
+        "bias_sweep_V": [
+          0,
+          50
+        ]
+      },
+      "metrology": [
+        "langmuir_probe"
+      ]
+    },
+    "source": "synthetic"
+  },
+  "plasma_result": {
+    "points": [
+      {
+        "bias_V": 0,
+        "te_eV": 2.5,
+        "ne_m3": 1.6e+17,
+        "ion_flux_m2s": 2.4e+20,
+        "ion_energy_eV": 5,
+        "species_m3": {
+          "e": 1.6e+17,
+          "Ar+": 1.6e+17
+        }
+      }
+    ],
+    "diagnostics": {
+      "power_balance_residual_pct": 2,
+      "runtime_s": 0.05,
+      "chemistry_id": "ar_lieberman_icp",
+      "averaging_note": "synthetic offline baseline"
+    }
+  },
+  "chemistry_fixture": "chemistry_ar_ready.json",
+  "expect": {
+    "verdict_in": [
+      "revise",
+      "escalate"
+    ],
+    "must_catch": [
+      "chemistry_schema"
+    ],
+    "must_not_signoff": true
+  }
+}

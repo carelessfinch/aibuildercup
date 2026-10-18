@@ -1,0 +1,36 @@
+[project]
+name = "plasma-etch-agents"
+version = "0.1.0"
+description = "Professor / Postdoc / PhD multi-agent plasma and etch simulation on Google ADK"
+readme = "README.md"
+requires-python = ">=3.13"
+license = "GPL-3.0-only"
+dependencies = [
+    "fastapi>=0.141.1",
+    "google-adk==2.11.0",
+    "httpx>=0.28.1",
+    "matplotlib>=3.11.2",
+    "pydantic>=2.14.0",
+    "pyyaml>=6.0.3",
+    "scipy>=1.18.1",
+    "sse-starlette>=3.5.0",
+    "uvicorn>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.10",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+# litrag is pre-existing ("extend, do not rewrite"); prototypes/ is reference-only.
+extend-exclude = ["litrag", "prototypes", "docs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["agents", "simtools", "evals", "web", "jobs"]

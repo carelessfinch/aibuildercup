@@ -1,0 +1,81 @@
+{
+  "case_id": "fault_impossible_pressure",
+  "kind": "fault",
+  "fault": {
+    "site": "fourm_input",
+    "description": "Unit conversion leaves a non-physical negative reactor pressure",
+    "coverage": [
+      "impossible_pressure"
+    ],
+    "inject": {
+      "path": "method.recipe.pressure_mTorr",
+      "op": "set",
+      "value": -15
+    }
+  },
+  "fourm_input": {
+    "case_id": "plasma_cf4o2_icp_fault_negative_pressure",
+    "question": "Validate electron density and etch rate for the CF4/O2 ICP.",
+    "machine": {
+      "diagnostics": [
+        "langmuir_probe",
+        "oes"
+      ]
+    },
+    "material": {
+      "wafer": "Si",
+      "stack": []
+    },
+    "method": {
+      "recipe": {
+        "power_W": 100,
+        "pressure_mTorr": 15,
+        "flow_sccm": {
+          "CF4": 40,
+          "O2": 10
+        },
+        "bias_sweep_V": [
+          0,
+          50,
+          100
+        ]
+      },
+      "metrology": [
+        "sem",
+        "langmuir_probe"
+      ]
+    },
+    "source": "synthetic"
+  },
+  "plasma_result": {
+    "points": [
+      {
+        "bias_V": 0,
+        "te_eV": 2.5,
+        "ne_m3": 1.6e+17,
+        "ion_flux_m2s": 1.82e+20,
+        "ion_energy_eV": 5,
+        "species_m3": {
+          "e": 1.6e+17,
+          "CF3+": 1.6e+17
+        }
+      }
+    ],
+    "diagnostics": {
+      "power_balance_residual_pct": 2,
+      "runtime_s": 0.04,
+      "chemistry_id": "cf4o2_kimura2006_stub",
+      "averaging_note": "synthetic offline baseline"
+    }
+  },
+  "expect": {
+    "verdict_in": [
+      "revise",
+      "escalate"
+    ],
+    "must_catch": [
+      "impossible_pressure"
+    ],
+    "must_not_signoff": true
+  }
+}

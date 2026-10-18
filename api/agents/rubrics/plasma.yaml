@@ -1,0 +1,51 @@
+schema: agents.rubric/1
+id: plasma_cf4o2_icp
+description: >-
+  Fixed Professor rubric for the low-power CF4/O2 ICP case (decision D5).
+  The Professor adds case-specific checks derived from the literature.
+fixed_checks:
+  - id: te_range
+    description: Electron temperature plausible for a low-pressure ICP
+    quantity: te_eV
+    op: between
+    bounds: [1.0, 10.0]
+    unit: eV
+  - id: ne_range
+    description: Electron density plausible for 100 W-class ICP
+    quantity: ne_m3
+    op: between
+    bounds: [1.0e+15, 1.0e+19]
+    unit: m^-3
+  - id: ion_flux_range
+    description: Bohm ion flux plausible at the wafer
+    quantity: ion_flux_m2s
+    op: between
+    bounds: [1.0e+18, 1.0e+21]
+    unit: m^-2 s^-1
+  - id: power_balance_residual
+    description: Particle/power balance closes within tolerance
+    quantity: diagnostics.power_balance_residual_pct
+    op: abs_at_most
+    bound: 10.0
+    unit: "%"
+  - id: etch_rate_magnitude
+    description: Etch rate magnitude plausible for Si in fluorine chemistry
+    quantity: etch_rate_nm_per_min
+    op: between
+    bounds: [10.0, 1000.0]
+    unit: nm/min
+  - id: bohm_flux_consistency
+    description: >-
+      Reported ion flux must equal h * n0 * u_B from its own ne and Te, with the
+      edge-to-centre factor h in a physical range (Lieberman & Lichtenberg ch. 10)
+    op: special
+    h_bounds: [0.05, 0.9]
+    tolerance_pct: 20.0
+  - id: species_densities_positive
+    description: All species densities strictly positive
+    op: special
+case_specific_instructions: >-
+  Derive 2-4 additional checks from the literature with litrag
+  (search_literature), cite each passage, and record them in
+  ProfessorReview.physics_checks. Fault-injected eval cases (decision E4)
+  must never receive a sign-off.

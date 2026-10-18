@@ -1,0 +1,58 @@
+"""Frozen role contracts (v1.2.0, 2026-10-09).
+
+Changes require a version bump.
+"""
+
+from agents.contracts.models import (
+    CONTRACTS_VERSION,
+    CalibrationReport,
+    CalibrationTarget,
+    DataKind,
+    EtchResult,
+    FinalReport,
+    FourMMetadata,
+    GapRow,
+    Machine,
+    Man,
+    Material,
+    Method,
+    OperatingPoint,
+    PhysicsCheck,
+    PlasmaPoint,
+    PlasmaResult,
+    ProfessorReview,
+    RubricResult,
+    SignOffState,
+    SimulationPlan,
+    SolverDiagnostics,
+    SolverGeometry,
+    UncertainParameter,
+    Verdict,
+)
+
+__all__ = [
+    "CONTRACTS_VERSION",
+    "CalibrationReport",
+    "CalibrationTarget",
+    "DataKind",
+    "EtchResult",
+    "FinalReport",
+    "FourMMetadata",
+    "GapRow",
+    "Machine",
+    "Man",
+    "Material",
+    "Method",
+    "OperatingPoint",
+    "PhysicsCheck",
+    "PlasmaPoint",
+    "PlasmaResult",
+    "ProfessorReview",
+    "RubricResult",
+    "SimulationPlan",
+    "SignOffState",
+    "SolverDiagnostics",
+    "SolverGeometry",
+    "UncertainParameter",
+    "Verdict",
+]

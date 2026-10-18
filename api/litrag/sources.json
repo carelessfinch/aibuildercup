@@ -1,0 +1,223 @@
+{
+  "_note": "Citation metadata for the literature corpus. The PDFs are copyrighted and stay private; only this metadata and the code are public.",
+  "sources": [
+    {
+      "id": "lieberman2005",
+      "file": "Lieberman and Lichtenberg Principles of Plasma Discharges and Materials Processing.pdf",
+      "kind": "textbook",
+      "short": "Lieberman & Lichtenberg (2005)",
+      "title": "Principles of Plasma Discharges and Materials Processing, 2nd ed.",
+      "authors": [
+        "M. A. Lieberman",
+        "A. J. Lichtenberg"
+      ],
+      "year": 2005,
+      "venue": "Wiley-Interscience",
+      "doi": "10.1002/0471724254",
+      "topics": [
+        "plasma discharges",
+        "global models",
+        "sheaths",
+        "ICP",
+        "CCP",
+        "etching",
+        "rate constants"
+      ],
+      "text_file": "lieberman2005.txt",
+      "text_origin": "Plain-text export of the PDF. Pages rebuilt from running heads.",
+      "pdf_page_offset": 37,
+      "roman_page_offset": 1,
+      "symbol_map": "wiley_mathpi"
+    },
+    {
+      "id": "bittencourt2004",
+      "file": "Bittencourt - Fundamentals of Plasma Physics.pdf",
+      "kind": "textbook",
+      "short": "Bittencourt (2004)",
+      "title": "Fundamentals of Plasma Physics, 3rd ed.",
+      "authors": [
+        "J. A. Bittencourt"
+      ],
+      "year": 2004,
+      "venue": "Springer",
+      "doi": "10.1007/978-1-4757-4030-1",
+      "topics": [
+        "plasma physics fundamentals",
+        "kinetic theory",
+        "transport",
+        "waves"
+      ]
+    },
+    {
+      "id": "chen1984_ch1",
+      "file": "06 - Intro to Plasma Physics_CH1.pdf",
+      "kind": "textbook",
+      "short": "Chen (1984), ch. 1",
+      "title": "Introduction to Plasma Physics and Controlled Fusion, 2nd ed., Vol. 1, Chapter 1: Introduction",
+      "authors": [
+        "F. F. Chen"
+      ],
+      "year": 1984,
+      "venue": "Plenum Press",
+      "doi": null,
+      "topics": [
+        "Debye shielding",
+        "plasma parameter",
+        "plasma criteria",
+        "plasma frequency"
+      ]
+    },
+    {
+      "id": "comsol_icp_cf4o2",
+      "file": "COMSOL_models.plasma.icp_rf_bias_cf4_o2_si_etching.pdf",
+      "kind": "vendor_model",
+      "short": "COMSOL App. Library (CF4/O2 ICP)",
+      "title": "Model of a CF4/O2 Inductively Coupled Plasma Reactor with RF Bias for Silicon Etching (Application Library model, COMSOL Multiphysics 6.4)",
+      "authors": [
+        "COMSOL"
+      ],
+      "year": null,
+      "venue": "COMSOL Multiphysics Application Library",
+      "doi": null,
+      "topics": [
+        "CF4/O2",
+        "ICP",
+        "RF bias",
+        "silicon etching",
+        "surface site fractions",
+        "COMSOL setup steps"
+      ]
+    },
+    {
+      "id": "shahbazian2025",
+      "file": "AI_driven_optimization_of_ICP_source_design_using_COMSOL_simulations.pdf",
+      "kind": "paper",
+      "short": "Shahbazian et al. (2025)",
+      "title": "Artificial intelligence-driven optimization of ICP source design using COMSOL simulations",
+      "authors": [
+        "A. Shahbazian",
+        "M. K. Salem",
+        "M. Ghoranneviss"
+      ],
+      "year": 2025,
+      "venue": "Phys. Plasmas 32, 113503",
+      "doi": "10.1063/5.0298049",
+      "topics": [
+        "ICP",
+        "COMSOL",
+        "surrogate model",
+        "DNN",
+        "genetic algorithm"
+      ]
+    },
+    {
+      "id": "ertl2009",
+      "file": "Ertl_2009_ECS_Trans._23_61.pdf",
+      "kind": "paper",
+      "short": "Ertl & Selberherr (2009)",
+      "title": "Three-Dimensional Plasma Etching Simulation using Advanced Ray Tracing and Level Set Techniques",
+      "authors": [
+        "O. Ertl",
+        "S. Selberherr"
+      ],
+      "year": 2009,
+      "venue": "ECS Trans. 23, 61",
+      "doi": "10.1149/1.3183702",
+      "topics": [
+        "feature-scale etch",
+        "level set",
+        "ray tracing",
+        "SF6/O2"
+      ]
+    },
+    {
+      "id": "nath2025",
+      "file": "A neural master equation framework for multiscale modeling of molecular processes application to atomic-scale plasma processes.pdf",
+      "kind": "paper",
+      "short": "Nath et al. (2025)",
+      "title": "A neural master equation framework for multiscale modeling of molecular processes: application to atomic-scale plasma processes",
+      "authors": [
+        "S. Nath",
+        "J. R. Vella",
+        "D. B. Graves",
+        "A. Mesbah"
+      ],
+      "year": 2025,
+      "venue": "npj Comput. Mater.",
+      "doi": "10.1038/s41524-025-01677-4",
+      "topics": [
+        "plasma-surface interaction",
+        "ALE",
+        "RIE",
+        "master equation",
+        "neural network",
+        "MD"
+      ]
+    },
+    {
+      "id": "dwivedi2023",
+      "file": "052602_1_6.0002841.pdf",
+      "kind": "paper",
+      "short": "Dwivedi et al. (2023)",
+      "title": "Orientation-dependent etching of silicon by fluorine molecules: A quantum chemistry computational study",
+      "authors": [
+        "O. D. Dwivedi",
+        "Y. Barsukov",
+        "S. Jubin",
+        "J. R. Vella",
+        "I. Kaganovich"
+      ],
+      "year": 2023,
+      "venue": "J. Vac. Sci. Technol. A 41, 052602",
+      "doi": "10.1116/6.0002841",
+      "topics": [
+        "F2 etching of Si",
+        "anisotropic etching",
+        "DFT",
+        "activation energy"
+      ]
+    },
+    {
+      "id": "wang2022_jap",
+      "file": "144303_1_online.pdf",
+      "kind": "paper",
+      "short": "Wang & Fang (2022)",
+      "title": "Real-time time-dependent DFT study of laser-enhanced atomic layer etching of silicon for damage-free nanostructure fabrication",
+      "authors": [
+        "P. Wang",
+        "F. Fang"
+      ],
+      "year": 2022,
+      "venue": "J. Appl. Phys. 132, 144303",
+      "doi": "10.1063/5.0109818",
+      "topics": [
+        "ALE",
+        "laser-enhanced etching",
+        "TDDFT",
+        "chlorinated silicon"
+      ]
+    },
+    {
+      "id": "wang2023_mssp",
+      "file": "1-s2.0-S1369800122006953-main.pdf",
+      "kind": "paper",
+      "short": "Wang et al. (2023)",
+      "title": "Mechanism of photo-assisted atomic layer etching of chlorinated Si(111) surfaces: Insights from DFT/TDDFT calculations",
+      "authors": [
+        "P. Wang",
+        "M. Castelli",
+        "F. Fang"
+      ],
+      "year": 2023,
+      "venue": "Mater. Sci. Semicond. Process. 153, 107169",
+      "doi": "10.1016/j.mssp.2022.107169",
+      "topics": [
+        "ALE",
+        "photo-assisted etching",
+        "DFT",
+        "TDDFT",
+        "Si(111)"
+      ]
+    }
+  ]
+}

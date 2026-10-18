@@ -1,0 +1,36 @@
+# Defaults for agents, jobs and web. Override per environment with env vars
+# (AGENT_MODEL, FLOW_MODE, REVIEW_MAX_ROUNDS, LITRAG_INDEX_DIR, ...).
+# Real secrets live in Secret Manager, never in this repo.
+
+agent:
+  model: gemini-3.8-flash      # one value for all roles (decision E1)
+
+flow:
+  mode: graph                  # graph | coordinator; same role contracts (D1)
+  include_etch: false          # demo default: Postdoc + one plasma PhD + Professor
+
+review:
+  max_rounds: 3                # on cap: ESCALATED — NOT SIGNED OFF (D3)
+
+solver:
+  backend: local               # local | cloud_run_job (M2); one job per sweep/plan (H6)
+
+gcp:
+  project_a: ""                # demo path: web, Agent Runtime, Gemini, jobs, litrag bucket, evals
+  project_b: ""                # Gemma only: LoRA training + vLLM GPU
+  region: asia-southeast1      # J6: Agent Runtime + RTX PRO 6000 confirmed; Gemini via global endpoint
+
+litrag:
+  index_dir: ""                # private GCS path or local dir, also via LITRAG_INDEX_DIR
+  embed_backend: gemini        # fallback: gemma-local
+
+gemma:
+  task: fourm_extraction       # F10 narrow task
+  endpoint_url: ""             # Project B vLLM service; A calls it via SA grant
+
+web:
+  flow_backend: mock           # mock | adk; adk drives the real ADK flow (needs Project A creds)
+  rate_limit_per_ip_per_hour: 10
+  daily_run_cap: 60
+  max_concurrent_runs: 2
+  spend_killswitch: false

@@ -1,0 +1,35 @@
+# --- private data: NEVER commit (scripts/check_private_files.sh + CI enforce) ---
+litrag/corpus/
+litrag/index/
+litrag/models/
+training/data/
+training/weights/
+*.pdf
+*.task
+*.safetensors
+*.ckpt
+*.pt
+*.gguf
+
+# --- python ---
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+
+# --- app artifacts / local runs ---
+runs/
+plots/
+web/node_modules/
+web/dist/
+.env
+.env.*
+
+# --- macOS ---
+.DS_Store
+
+.playwright-cli/

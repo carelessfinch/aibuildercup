@@ -1,0 +1,40 @@
+{"q": "At what pressure, gas flow and coil power does the CF4/O2 ICP reference model operate?", "source": "comsol_icp_cf4o2", "pages": [[6, 6]]}
+{"q": "Which silicon surface sites are solved for in the COMSOL etching model?", "source": "comsol_icp_cf4o2", "pages": [[2, 2]]}
+{"q": "Where does the CF4/O2 reaction set in the COMSOL model come from?", "source": "comsol_icp_cf4o2", "pages": [[2, 2], [11, 11]]}
+{"q": "How does the predicted silicon etch rate change when the RF bias voltage on the wafer is increased?", "source": "comsol_icp_cf4o2", "pages": [[7, 10]]}
+{"q": "How large was the simulation dataset used to train the ICP surrogate, and which inputs were varied?", "source": "shahbazian2025", "pages": [[2, 2], [7, 7]]}
+{"q": "What neural network architecture and training settings were used for the plasma surrogate?", "source": "shahbazian2025", "pages": [[8, 8]]}
+{"q": "How was the optimum predicted by the surrogate checked against the full simulation?", "source": "shahbazian2025", "pages": [[2, 2], [12, 14]]}
+{"q": "How does the 3D etch simulator move the surface over time?", "source": "ertl2009", "pages": [[5, 5]]}
+{"q": "How are the particle fluxes inside the etched feature computed in 3D?", "source": "ertl2009", "pages": [[5, 6]]}
+{"q": "What surface coverage model is used for fluorine and oxygen in SF6/O2 etching?", "source": "ertl2009", "pages": [[3, 4]]}
+{"q": "Which quantum chemistry method and basis set were used to compute fluorine chemisorption barriers?", "source": "dwivedi2023", "pages": [[7, 7]]}
+{"q": "Why does molecular fluorine etch Si(111) more slowly than Si(100)?", "source": "dwivedi2023", "pages": [[4, 4], [11, 12]]}
+{"q": "Is the REBO interatomic potential accurate for F2 dissociative chemisorption on silicon?", "source": "dwivedi2023", "pages": [[4, 4], [9, 10]]}
+{"q": "How does the neural master equation approach represent unknown transitions between states?", "source": "nath2025", "pages": [[1, 3]]}
+{"q": "Where is the code for the neural master equation surface kinetics model available?", "source": "nath2025", "pages": [[10, 10]]}
+{"q": "What ion energies are typically used in plasma atomic layer etching of silicon, and what problem do they cause?", "source": "wang2022_jap", "pages": [[2, 2]]}
+{"q": "Which electronic transition dominates photo-assisted desorption of SiCl2 from chlorinated Si(111)?", "source": "wang2023_mssp", "pages": [[3, 4]]}
+{"q": "What condition must hold for an ionized gas to count as a plasma?", "source": "chen1984_ch1", "pages": [[12, 12]]}
+{"q": "How much ionization does the Saha equation predict for room-temperature air?", "source": "chen1984_ch1", "pages": [[2, 3]]}
+{"q": "What sets the thickness of the shielding cloud around a charged grid in a plasma?", "source": "chen1984_ch1", "pages": [[10, 11]]}
+{"q": "What condition on the ion velocity at the sheath edge is needed for a collisionless sheath to form?", "source": "lieberman2005", "pages": [[206, 211]]}
+{"q": "In a global model of an electropositive discharge, how is the electron temperature found, and does it depend on input power?", "source": "lieberman2005", "pages": [[370, 371]]}
+{"q": "How do you get the plasma density from the absorbed power in a uniform-density discharge model?", "source": "lieberman2005", "pages": [[371, 372]]}
+{"q": "What limits the current through a high-voltage collisionless sheath?", "source": "lieberman2005", "pages": [[213, 214]]}
+{"q": "How much can energetic ion bombardment increase the fluorine-atom etch rate of silicon?", "source": "lieberman2005", "pages": [[626, 628]]}
+{"q": "What decides whether a fluorocarbon discharge etches the substrate or deposits polymer?", "source": "lieberman2005", "pages": [[631, 633]]}
+{"q": "How is adsorption and desorption on a surface modeled with Langmuir kinetics?", "source": "lieberman2005", "pages": [[352, 353]]}
+{"q": "What is the collisional energy lost per electron-ion pair created and how does it vary with electron temperature?", "source": "lieberman2005", "pages": [[118, 119]]}
+{"q": "Why does the etch rate drop when more etchable wafer area is exposed?", "source": "lieberman2005", "pages": [[621, 622]]}
+{"q": "How can the electron energy distribution be obtained from a Langmuir probe current-voltage trace?", "source": "lieberman2005", "pages": [[226, 228]]}
+{"q": "Which particles escape from a magnetic bottle, and what sets the angle of the cone they escape through?", "source": "bittencourt2004", "pages": [[102, 103]]}
+{"q": "Why does the polarization plane of a radio wave rotate as it crosses the magnetized ionosphere, and how is that used as a diagnostic?", "source": "bittencourt2004", "pages": [[467, 469]]}
+{"q": "How much current must flow along a plasma column to confine it with its own magnetic field at a given temperature and line density?", "source": "bittencourt2004", "pages": [[351, 352]]}
+{"q": "What transverse wave runs along the field lines of a conducting fluid when the field lines behave like strings under tension?", "source": "bittencourt2004", "pages": [[399, 400]]}
+{"q": "Why does a longitudinal electron wave in a hot collisionless plasma lose amplitude without any collisions?", "source": "bittencourt2004", "pages": [[523, 526]]}
+{"q": "Why do electrons and ions leave a plasma at one common rate between their free diffusion rates, and what is that coefficient?", "source": "bittencourt2004", "pages": [[280, 282]]}
+{"q": "Which way do ions and electrons drift when the magnetic field strength changes across the field direction?", "source": "bittencourt2004", "pages": [[97, 98]]}
+{"q": "How is the collision term derived when many small-angle Coulomb deflections matter more than single large-angle collisions?", "source": "bittencourt2004", "pages": [[635, 638]]}
+{"q": "What characteristic frequency combines the electron plasma frequency and the electron cyclotron frequency for waves across B?", "source": "bittencourt2004", "pages": [[449, 453], [571, 574]]}
+{"q": "Why does the wave amplitude grow when two counterstreaming electron beams pass through each other?", "source": "bittencourt2004", "pages": [[529, 531]]}

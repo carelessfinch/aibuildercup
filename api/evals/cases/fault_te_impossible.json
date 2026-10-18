@@ -1,0 +1,90 @@
+{
+  "case_id": "fault_te_impossible",
+  "kind": "fault",
+  "fault": {
+    "site": "plasma_result",
+    "description": "Corrupted solver output: te_eV = 250 eV in a low-power ICP",
+    "coverage": [
+      "impossible_te"
+    ],
+    "inject": {
+      "path": "points.0.te_eV",
+      "op": "set",
+      "value": 250.0
+    }
+  },
+  "fourm_input": {
+    "case_id": "plasma_cf4o2_icp_fault_te",
+    "question": "Validate electron temperature against the reference case.",
+    "machine": {
+      "diagnostics": [
+        "langmuir_probe"
+      ]
+    },
+    "material": {
+      "wafer": "Si",
+      "stack": []
+    },
+    "method": {
+      "recipe": {
+        "power_W": 100,
+        "pressure_mTorr": 15,
+        "flow_sccm": {
+          "CF4": 40,
+          "O2": 10
+        },
+        "bias_sweep_V": [
+          0,
+          50,
+          100
+        ]
+      },
+      "metrology": [
+        "sem"
+      ]
+    },
+    "source": "synthetic"
+  },
+  "plasma_result": {
+    "points": [
+      {
+        "bias_V": 0,
+        "te_eV": 2.5,
+        "ne_m3": 1.6e+17,
+        "ion_flux_m2s": 1.82e+20,
+        "ion_energy_eV": 5,
+        "species_m3": {
+          "e": 1.6e+17,
+          "CF3+": 1.6e+17
+        }
+      },
+      {
+        "bias_V": 50,
+        "te_eV": 2.5,
+        "ne_m3": 1.58e+17,
+        "ion_flux_m2s": 1.8e+20,
+        "ion_energy_eV": 55,
+        "species_m3": {
+          "e": 1.58e+17,
+          "CF3+": 1.58e+17
+        }
+      }
+    ],
+    "diagnostics": {
+      "power_balance_residual_pct": 2.8,
+      "runtime_s": 0.05,
+      "chemistry_id": "cf4o2_kimura2006_stub",
+      "averaging_note": "synthetic offline baseline"
+    }
+  },
+  "expect": {
+    "verdict_in": [
+      "revise",
+      "escalate"
+    ],
+    "must_catch": [
+      "te_range"
+    ],
+    "must_not_signoff": true
+  }
+}

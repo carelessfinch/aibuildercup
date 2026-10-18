@@ -1,0 +1,7 @@
+# Copyrighted source material and anything derived from it: never in the public repo.
+index/
+models/
+corpus/
+__pycache__/
+.venv/
+.env

@@ -1,0 +1,35 @@
+schema: simtools.chemistry/1
+id: ar_lieberman_icp
+status: ready
+citation: >-
+  Argon ICP global model after Lieberman & Lichtenberg, Principles of Plasma
+  Discharges and Materials Processing, 2nd ed. (2005), ch. 10; rate fits as
+  implemented in prototypes/ar_icp_global_model.py (feasibility check,
+  2026-10-06).
+species:
+  - {name: e, charge: -1, mass_amu: 0.0005486, role: electron}
+  - {name: Ar, charge: 0, mass_amu: 39.948, role: neutral}
+  - {name: Ar+, charge: 1, mass_amu: 39.948, role: ion}
+reactions:
+  - id: R1
+    equation: "e + Ar -> Ar+ + 2e"
+    type: electron_impact
+    rate: {form: arrhenius, A: 2.34e-14, B: 0.59, C: 17.44}
+    source_note: "Kiz(Te) = 2.34e-14 * Te^0.59 * exp(-17.44/Te) m^3/s (prototype fit)"
+  - id: R2
+    equation: "e + Ar -> Ar* + e"
+    type: electron_impact
+    rate: {form: arrhenius, A: 2.48e-14, B: 0.33, C: 12.78}
+    source_note: "Kex(Te) excitation (prototype fit)"
+  - id: R3
+    equation: "e + Ar -> e + Ar (effective elastic)"
+    type: electron_impact
+    rate: {form: arrhenius, A: 2.336e-14, B: 1.609, C: 0.0}
+    source_note: >-
+      Kel(Te) effective elastic (prototype fit). The prototype's log-polynomial
+      correction term is applied by the W1 engine, not expressible in schema v1.
+geometry: {radius_m: 0.15, height_m: 0.10, gas_temperature_K: 300.0}
+notes: >-
+  Working chemistry for M1 (decision K1). W1 follows the prototype: Te from
+  particle balance (brentq), power balance with sheath losses, Bohm flux at
+  the wall, power coupling efficiency eta = 0.8 as an uncertain parameter.

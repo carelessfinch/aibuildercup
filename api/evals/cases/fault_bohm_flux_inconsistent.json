@@ -1,0 +1,88 @@
+{
+  "case_id": "fault_bohm_flux_inconsistent",
+  "kind": "fault",
+  "fault": {
+    "site": "plasma_result",
+    "description": "Reported ion flux is orders of magnitude below its own Te/ne Bohm estimate",
+    "coverage": [
+      "bohm_flux_consistency"
+    ],
+    "inject": {
+      "path": "points.0.ion_flux_m2s",
+      "op": "set",
+      "value": 1000000000000000.0
+    }
+  },
+  "fourm_input": {
+    "case_id": "plasma_ar_icp_fault_bohm",
+    "question": "Validate ion flux for a synthetic argon ICP.",
+    "machine": {
+      "diagnostics": [
+        "langmuir_probe"
+      ]
+    },
+    "material": {
+      "wafer": "Si",
+      "stack": []
+    },
+    "method": {
+      "recipe": {
+        "power_W": 300,
+        "pressure_mTorr": 10,
+        "flow_sccm": {
+          "Ar": 50
+        },
+        "bias_sweep_V": [
+          0,
+          50
+        ]
+      },
+      "metrology": [
+        "langmuir_probe"
+      ]
+    },
+    "source": "synthetic"
+  },
+  "plasma_result": {
+    "points": [
+      {
+        "bias_V": 0,
+        "te_eV": 2.5,
+        "ne_m3": 1.6e+17,
+        "ion_flux_m2s": 2.4e+20,
+        "ion_energy_eV": 5,
+        "species_m3": {
+          "e": 1.6e+17,
+          "Ar+": 1.6e+17
+        }
+      },
+      {
+        "bias_V": 50,
+        "te_eV": 2.5,
+        "ne_m3": 1.58e+17,
+        "ion_flux_m2s": 2.37e+20,
+        "ion_energy_eV": 55,
+        "species_m3": {
+          "e": 1.58e+17,
+          "Ar+": 1.58e+17
+        }
+      }
+    ],
+    "diagnostics": {
+      "power_balance_residual_pct": 2,
+      "runtime_s": 0.04,
+      "chemistry_id": "ar_lieberman_icp",
+      "averaging_note": "synthetic offline baseline"
+    }
+  },
+  "expect": {
+    "verdict_in": [
+      "revise",
+      "escalate"
+    ],
+    "must_catch": [
+      "bohm_flux_consistency"
+    ],
+    "must_not_signoff": true
+  }
+}
